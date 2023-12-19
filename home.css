@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    right: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 100;
+}
+.logo{
+    color: #3876BF;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:   cursive;
+}
+.pc {
+    display: flex;
+    gap: 10px;
+}
+
+.link {
+    padding: 10px 20px;
+    text-decoration: none
+}
+
+.pcDropdown {
+    position: relative;
+}
+
+.username {
+    width: 160px;
+    background-color: #3876BF;
+    color: white;
+    border: 0;
+    padding: 0 20px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.pcDropdownContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.show {
+    display: block;
+}
+
+.mobileLink {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    color: black;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+}
+
+.mobileLink:hover {
+    background-color: grey;
+}
+
+.edit {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    color: green;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+}
+
+.edit:hover {
+    background-color: rgba(0, 255, 0, .2);
+}
+
+.logout {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    color: blue;
+    background-color: white;
+}
+
+.logout:hover {
+    background-color: rgba(0, 0, 255, .2);
+}
+
+.delete {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    color: red;
+    background-color: white;
+}
+
+.delete:hover {
+    background-color: rgba(255, 0, 0, .2);
+}
+
+.mobile {
+    display: none;
+    /* position: relative; */
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hamburger div {
+    height: 3px;
+    width: 30px;
+    background-color: black;
+}
+
+.mobileDropdownContent {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: -100;
+}
+
+.showMobile {
+    display: flex;
+}
+
+.home {
+    padding: 0 70px;
+}
+
+h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    flex: 1;
+}
+
+.noHouse {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    text-align: center;
+    align-self: center;
+    font-size: 70px;
+    color: #3877bf8f;
+}
+
+.card {
+    width: 100%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+    transition: .2s cubic-bezier(.25, .1, 0, 2.05);
+}
+
+.card:hover {
+    transform: scale(1.015);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.desc {
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 19px;
+}
+.location{
+    text-transform: capitalize;
+    color: grey;
+}
+.price {
+    color: green;
+}
+
+.deleteCard {
+    padding: 5px;
+    background: transparent;
+    border: 0;
+    color: rgb(248, 142, 142);
+    cursor: pointer;
+}
+
+.deleteCard:hover {
+    color: red;
+}
+
+.buy {
+    background-color: #3876BF;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 25px;
+}
+.buy:hover{
+    background-color: #2d5a8f;
+}
+@media (max-width:1550px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width:1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:650px) {
+
+    .home,
+    .nav {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width:500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:800px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
